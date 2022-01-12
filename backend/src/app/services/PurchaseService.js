@@ -1,7 +1,6 @@
 
 const rest = (value, note) => value % note;
 
-
 const changePurchase = (purchaseValue, payment) => {
   const noteChange = (note, value) => {
     if (change - rest(note, value) === 0) {
@@ -20,9 +19,8 @@ const changePurchase = (purchaseValue, payment) => {
     'notes of 10': noteChange(10, change),
     'notes of 1': noteChange(1, change)
   };
-
 };
 
 
 
-export { changePurchase };
+module.exports = changePurchase;

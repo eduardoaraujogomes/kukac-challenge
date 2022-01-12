@@ -14,4 +14,4 @@ const palindromeList = (initial, final) => {
 };
 
 
-export { palindromeList };
+module.exports = palindromeList;
