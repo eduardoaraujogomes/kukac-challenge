@@ -1,6 +1,6 @@
 interface Vehicle {
   model: string;
-  year: string;
+  year: number;
   doors?: number;
   brand: string;
 }
