@@ -1,12 +1,12 @@
-const isPalindrome = (number) => {
+const isPalindromo = (number) => {
   const reversedNumber = number.toString().split('').reverse().join('');
   return reversedNumber == number;
 };
 
-const palindromeList = (initial, final) => {
+const palindromoList = (initial, final) => {
   const valuesList = [];
   for (let index = initial; index <= final; index += 1) {
-    if (isPalindrome(index)) {
+    if (isPalindromo(index)) {
       valuesList.push(index);
     }
   }
@@ -14,4 +14,4 @@ const palindromeList = (initial, final) => {
 };
 
 
-module.exports = { palindromeList, isPalindrome };
+module.exports = { palindromoList, isPalindromo };
