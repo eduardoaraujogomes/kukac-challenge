@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './style.scss';
 import Svg from '../Svg';
 import { firstSvg, secondSvg } from './svgValues';
@@ -15,9 +16,11 @@ function Navbar() {
       <div id='header'>
         <div className='container'>
           <nav className='navbar navbar-expand-lg '>
-            <a className='navbar-brand playground' href='index.html'>
-              <h3>Playground Kukac</h3>
-            </a>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <a className='navbar-brand playground' href='index.html'>
+                <h3>Playground Kukac</h3>
+              </a>
+            </Link>
             <button
               onClick={change}
               className='navbar-toggler'
@@ -36,40 +39,48 @@ function Navbar() {
             >
               <ul className='navbar-nav'>
                 <li className='nav-item'>
-                  <a
-                    className='nav-link active'
-                    aria-current='page'
-                    href='#about'
-                  >
-                    Palíndromo
-                  </a>
+                  <Link to='/' style={{ textDecoration: 'none' }}>
+                    <a
+                      className='nav-link active'
+                      aria-current='page'
+                      href='#about'
+                    >
+                      Palíndromo
+                    </a>
+                  </Link>
                 </li>
                 <li className='nav-item'>
-                  <a
-                    className='nav-link active'
-                    aria-current='page'
-                    href='#technologies'
-                  >
-                    Compras
-                  </a>
+                  <Link to='/purchase' style={{ textDecoration: 'none' }}>
+                    <a
+                      className='nav-link active'
+                      aria-current='page'
+                      href='#technologies'
+                    >
+                      Compras
+                    </a>
+                  </Link>
                 </li>
                 <li className='nav-item'>
-                  <a
-                    className='nav-link active'
-                    aria-current='page'
-                    href='#projects'
-                  >
-                    Carros/Motos
-                  </a>
+                  <Link to='/vehicle' style={{ textDecoration: 'none' }}>
+                    <a
+                      className='nav-link active'
+                      aria-current='page'
+                      href='#projects'
+                    >
+                      Carros/Motos
+                    </a>
+                  </Link>
                 </li>
                 <li className='nav-item'>
-                  <a
-                    className='nav-link active'
-                    aria-current='page'
-                    href='#contact'
-                  >
-                    CEP's
-                  </a>
+                  <Link to='/cep' style={{ textDecoration: 'none' }}>
+                    <a
+                      className='nav-link active'
+                      aria-current='page'
+                      href='#contact'
+                    >
+                      CEP's
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>

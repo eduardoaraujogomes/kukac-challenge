@@ -1,13 +1,4 @@
-.background-container{
-  background-color: var(--background);
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  filter: brightness(0.80);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.panel-palindromo {
+.panel-purchase {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -23,7 +14,7 @@
 
 }
 
-.palindromo-values {
+.purchase-values {
   height: 25px;
   padding: 2px;
   margin: 5px;
@@ -32,14 +23,19 @@
   background-color: var(--background);
   color: var(--white);
 
-  &:focus{
+  &:focus {
       outline: none;
       border: 3px solid var(--primary);
   }
 
 }
 
-.palindromo-box-numbers {
+.desactive {
+  display: none;
+  overflow: hidden;
+}
+
+.purchase-box-numbers {
   min-height: 25px;
   height: auto;
   padding: 10px;
@@ -52,8 +48,10 @@
   align-items: ceter;
 }
 
-.palindromo-numbers {
-  justify-self: center;
-  align-self: center;
-}
 
+.purchase-box-numbers tr,
+.purchase-box-numbers th {
+  width:25%;
+  border: 1px solid var(--primary);
+
+}

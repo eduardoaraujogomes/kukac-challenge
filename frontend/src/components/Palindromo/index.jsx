@@ -44,7 +44,7 @@ export const Palindromo = () => {
   return (
     <>
       <div className="col-12 container background-container mt-5" >
-        <div className='d-flex justify-content-center aligm-items-center mb-5' ><h5>Palíndromo de números</h5></div>
+        <h5 className='text-center mb-5'>Palíndromo de números</h5>
         <div>
           <Formik onSubmit={handleSubmit} initialValues={{ initialValue: '', finalValue: '' }} >
             <Form className="container d-flex flex-column align-items-center gap-3">
@@ -53,7 +53,6 @@ export const Palindromo = () => {
                 <label className="" htmlFor="initialValue">Valor Inicial</label>
                 <Field
                   className='palindromo-values p-3'
-                  placeholder='Valor inicial'
                   name='initialValue'
                   required-type='number'
                   id='initialValue'
@@ -62,7 +61,6 @@ export const Palindromo = () => {
                 <label className="" htmlFor=" finalValue">Valor Final</label>
                 <Field
                   className='palindromo-values p-3'
-                  placeholder='Valor final'
                   name='finalValue'
                   required-type='number'
                   id='finalValue'
