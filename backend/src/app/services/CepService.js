@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 
 const baseUrl = `https://viacep.com.br/ws`;
 
@@ -11,5 +11,5 @@ const CEPs = async (ceps = []) => {
   return arrAddresses;
 };
 
-export { CEPs };
+module.exports = CEPs;
 
