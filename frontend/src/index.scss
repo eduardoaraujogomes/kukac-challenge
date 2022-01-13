@@ -75,11 +75,13 @@ label:focus,
 .button-primary-outline {
   border-color: var(--btn-primary);
   color: var(--btn-primary);
+  background-color: var(--background);
 
   &:hover,
   &:active {
     background-color: var(--btn-hover);
     border-color: var(--btn-hover);
+    color: var(--black);
   }
 }
 

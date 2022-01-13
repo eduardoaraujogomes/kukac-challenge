@@ -1,0 +1,60 @@
+.background-container{
+  background-color: var(--background);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  filter: brightness(0.80);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.panel-palindromo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+
+}
+
+.panel-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.palindromo-values {
+  height: 25px;
+  padding: 2px;
+  margin: 5px;
+  border: 3px solid var(--primary);
+  border-radius: 5px;
+  background-color: var(--background);
+  color: var(--white);
+  font-family: 'Krub', sans-serif;
+
+  &:focus{
+      outline: none;
+      border: 3px solid var(--primary);
+  }
+
+}
+
+.palindromo-box-numbers {
+  min-height: 25px;
+  height: auto;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: var(--background);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: ceter;
+}
+
+.palindromo-numbers {
+  justify-self: center;
+  align-self: center;
+}
+

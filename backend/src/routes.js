@@ -9,12 +9,12 @@ const CepController = require('./app/controllers/CepController.js');
 
 const router = Router();
 
-router.post('/palindromo', PalindromoController.show);
-router.post('/purchase', PurchaseController.show);
+router.get('/palindromo', PalindromoController.show);
+router.get('/purchase', PurchaseController.show);
 router.post('/motocycle', MotocycleController.store);
 router.get('/motocycle', MotocycleController.show);
 router.post('/car', CarController.store);
 router.get('/car', CarController.show);
-router.post('/cep', CepController.show);
+router.get('/cep', CepController.show);
 
 module.exports = router;
