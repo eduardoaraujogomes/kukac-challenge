@@ -3,7 +3,7 @@ import './style.scss';
 import Svg from '../Svg';
 import { firstSvg, secondSvg } from './svgValues';
 
-function Header() {
+function Navbar() {
   const [svgVal, setSvgVal] = useState(firstSvg);
 
   const change = () => {
@@ -80,4 +80,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navbar;

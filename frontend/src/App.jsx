@@ -1,15 +1,11 @@
-import Header from "./components/Header";
-import ScrollButton from './components/ScrollButton';
-import Palindromo from "./components/Palindromo";
+import RouteList from './routes';
 
-function App() {
+const App = () => {
   return (
     <>
-      <Header />
-      <Palindromo />
-      <ScrollButton />
+      <RouteList />
     </>
   );
-}
+};
 
 export default App;

@@ -57,6 +57,7 @@ export const Palindromo = () => {
                   name='initialValue'
                   required-type='number'
                   id='initialValue'
+                  autoComplete='off'
                 />
                 <label className="" htmlFor=" finalValue">Valor Final</label>
                 <Field
@@ -65,6 +66,7 @@ export const Palindromo = () => {
                   name='finalValue'
                   required-type='number'
                   id='finalValue'
+                  autoComplete='off'
                 />
               </div>
               <h5>Lista de números:</h5>
