@@ -41,7 +41,7 @@ function Header() {
                     aria-current='page'
                     href='#about'
                   >
-                    Palíndrome
+                    Palíndromo
                   </a>
                 </li>
                 <li className='nav-item'>
