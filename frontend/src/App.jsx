@@ -1,10 +1,11 @@
 import Header from "./components/Header";
+import ScrollButton from './components/ScrollButton';
 
 function App() {
   return (
     <>
       <Header />
-      <h1>Hello Kukac</h1>
+      <ScrollButton />
     </>
   );
 }
