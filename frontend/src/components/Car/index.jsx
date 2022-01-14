@@ -14,12 +14,14 @@ const Car = () => {
     if (!!car.innerHTML) {
       car.innerHTML =
         `
+        <thead>
             <tr>
                <th>Modelo</th>
                <th>Ano de Fabricação</th>
                <th>Marca</th>
                <th>Quantidade de Portas</th>
             </tr>
+        </thead>
             `;
     }
   };
@@ -39,16 +41,7 @@ const Car = () => {
   };
 
   const handleSubmit = async ({ modelInfo, yearInfo, brandInfo, doorsInfo }) => {
-    if (+doorsInfo !== 2 && +doorsInfo !== 4) {
-      Swal.fire({
-        title: "Erro de cadastro!",
-        icon: 'error',
-        html: `Só é permitido informar 2 ou 4 portas no carro!`,
-        showCloseButton: true,
-        showConfirmButton: false
-      });
-      return;
-    }
+
 
     try {
       const response = await api.post(`/car`, {
@@ -80,7 +73,7 @@ const Car = () => {
           <div className="modal-content background-container">
             <div className="modal-header">
               <h4 className="modal-title" id="carModal">Carro</h4>
-              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" ></button>
+              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
               <Formik onSubmit={handleSubmit} initialValues={{ modelInfo: '', yearInfo: '', brandInfo: '', doorsInfo: '' }} >
@@ -130,7 +123,7 @@ const Car = () => {
                       </tr>
                       {!!carsList && carsList.map((car, idx) => {
                         return (
-                          <>
+                          <tbody>
                             <tr key={idx}>
                               <th>{car.model}</th>
                               <th>{car.year}</th>
@@ -138,7 +131,7 @@ const Car = () => {
                               <th>{car.doors}</th>
                             </tr>
 
-                          </>
+                          </tbody>
                         );
                       })}
                     </table>

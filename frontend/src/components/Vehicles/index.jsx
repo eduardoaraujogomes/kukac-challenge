@@ -6,9 +6,10 @@ import Motocycle from '../Motocycle';
 const Vehicles = () => {
   const [formChosed, setFormChosed] = useState('');
 
-  const handleVehicleClick = (e) => {
-    setFormChosed(e.currentTarget.value);
+  const handleVehicleClick = (element) => {
+    setFormChosed(element.currentTarget.innerText);
   };
+
 
   return (
     <>
@@ -19,26 +20,16 @@ const Vehicles = () => {
             <p>Informe qual tipo de veículo você deseja cadastrar para gerar o formulário corretamente.
             </p>
             <div className="container d-flex justify-content-center align-items-center gap-3">
-              <button type="button" class="button-primary col-2 p-2" data-bs-toggle="modal" data-bs-target="#carModal">
+              <button type="button" class="button-primary col-2 p-2" data-bs-toggle="modal" data-bs-target="#carModal" onClick={handleVehicleClick}>
                 Carro
               </button>
-              <button type="button" class="button-primary col-2 p-2" data-bs-toggle="modal" data-bs-target="#motocycleModal">
+              <button type="button" class="button-primary col-2 p-2" data-bs-toggle="modal" data-bs-target="#motocycleModal" onClick={handleVehicleClick}>
                 Moto
               </button>
             </div>
             <div>
-              {formChosed === 'motocycle' ? (
-                <>
-                  <div>
-                    <Motocycle />
-                  </div>
-                </>) : (
-                <>
-                  <div>
-                    <Car />
-                  </div>
-                </>
-              )}
+              <Motocycle />
+              <Car />
             </div>
           </div>
         </div>

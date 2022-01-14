@@ -14,13 +14,15 @@ const Motocyle = () => {
     const motocycle = document.querySelector('[data-js="motocycle"]');
     if (!!motocycle.innerHTML) {
       motocycle.innerHTML = `
-            <tr>
-               <th>Modelo</th>
-               <th>Ano de Fabricação</th>
-               <th>Marca</th>
-               <th>Nº de Passageiros</th>
-               <th>Qtd de Rodas</th>
-            </tr>
+           <thead>
+              <tr>
+                <th>Modelo</th>
+                <th>Ano de Fabricação</th>
+                <th>Marca</th>
+                <th>Nº de Passageiros</th>
+                <th>Quantidade de Rodas</th>
+              </tr>
+            </thead>
             `;
     }
   };
@@ -29,34 +31,34 @@ const Motocyle = () => {
 
   const firstRender = async () => {
     try {
-      const response = await api.get(`/vehicles/motocycle/all`);
+      const response = await api.get(`/motocycle`);
       setMotocyclesList(response.data);
-    } catch (e) {
-      console.log(e);
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Não foi possível carregar os dados das motos',
+        confirmButtonText: 'Ok'
+      });
     }
   };
 
   const handleSubmit = async ({ modelInfo, yearInfo, brandInfo, passengersInfo }) => {
-    if (+passengersInfo !== 1 && +passengersInfo !== 2) {
-      Swal.fire({
-        title: "Erro de cadastro!",
-        icon: 'error',
-        html: `Só é permitido informar 1 ou 2 passageiros!`,
-        showCloseButton: true,
-        showConfirmButton: false
-      });
-      return;
-    }
     try {
-      const response = await api.post(`/vehicles/motocycle`, {
+      const response = await api.post(`/motocycle`, {
         model: modelInfo,
-        year: yearInfo,
+        year: +yearInfo,
         brand: brandInfo,
-        passengers: passengersInfo
+        passenger: +passengersInfo
       });
       setMotocyclesList(response.data);
-    } catch (e) {
-      console.log(e);
+    } catch ({ response }) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: `${response.data.error}`,
+        confirmButtonText: 'Ok'
+      });
     }
   };
 
@@ -67,14 +69,14 @@ const Motocyle = () => {
 
   return (
     <>
-      <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="motocycleModal" aria-hidden="true" style={{ height: '100vh' }}>
-        <div class="modal-dialog modal-xl background-container">
-          <div class="modal-content background-container">
-            <div class="modal-header">
-              <h5 class="modal-title" id="motocycleModal">Moto</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div className="modal" id="motocycleModal" tabindex="-1" aria-labelledby="motocycleModal" aria-hidden="true" style={{ height: '100vh' }}>
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content background-container">
+            <div className="modal-header">
+              <h5 className="modal-title" id="motocycleModal">Moto</h5>
+              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               <Formik onSubmit={handleSubmit} initialValues={{ modelInfo: '', yearInfo: '', brandInfo: '', passengersInfo: '' }} >
                 <Form className="container d-flex flex-column align-items-center gap-3">
                   <div className="d-flex flex-wrap align-items-center justify-content-center gap-3">
@@ -84,29 +86,33 @@ const Motocyle = () => {
                       name='modelInfo'
                       required-type='text'
                       id='modelInfo'
+                      autoComplete='off'
                     />
                     <label htmlFor="yearInfo" className='col-4'>Ano de fabricação</label>
                     <Field
                       className='motocycles-values col-4 p-3'
                       name='yearInfo'
-                      required-type='text'
+                      required-type='number'
                       id='yearInfo'
+                      autoComplete='off'
                     />
 
+                    <label htmlFor="brandInfo" className='col-4'>Marca</label>
                     <Field
-                      className='motocycles-values p-3'
-                      placeholder='Marca'
+                      className='motocycles-values p-3 col-4'
                       name='brandInfo'
                       required-type='text'
                       id='brandInfo'
+                      autoComplete='off'
                     />
 
+                    <label htmlFor="passengersInfo" className='col-4'>Nº de Passageiros(1-2)</label>
                     <Field
-                      className='motocycles-values p-3'
-                      placeholder='Nº de Passageiros'
+                      className='motocycles-values p-3 col-4'
                       name='passengersInfo'
-                      required-type='text'
+                      required-type='number'
                       id='passengersInfo'
+                      autoComplete='off'
                     />
                   </div>
                   <h5>Motocicletas cadastradas:</h5>
@@ -121,7 +127,7 @@ const Motocyle = () => {
                       </tr>
                       {!!motocyclesList && motocyclesList.map((moto, idx) => {
                         return (
-                          <>
+                          <tbody>
                             <tr key={idx}>
                               <th>{moto.model}</th>
                               <th>{moto.year}</th>
@@ -129,23 +135,17 @@ const Motocyle = () => {
                               <th>{moto.passengers}</th>
                               <th>{moto.wheels}</th>
                             </tr>
-
-                          </>
+                          </tbody>
                         );
                       })}
 
                     </table>
                   </div>
                   <div className="container d-flex justify-content-center align-items-center gap-3">
-                    <button className='' type="submit">Cadastrar</button>
+                    <button className='button-primary' type="submit">Cadastrar</button>
                   </div>
                 </Form>
               </Formik>
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
