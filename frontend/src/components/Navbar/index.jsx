@@ -61,13 +61,13 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className='nav-item'>
-                  <Link to='/vehicle' style={{ textDecoration: 'none' }}>
+                  <Link to='/vehicles' style={{ textDecoration: 'none' }}>
                     <a
                       className='nav-link active'
                       aria-current='page'
                       href='#projects'
                     >
-                      Carros/Motos
+                      Veículos
                     </a>
                   </Link>
                 </li>

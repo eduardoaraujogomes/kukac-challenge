@@ -1,0 +1,43 @@
+.cars-values {
+  height: 25px;
+  padding: 2px;
+  margin: 5px;
+  border: 3px solid var(--primary);
+  border-radius: 5px;
+  background-color: var(--background);
+  color: var(--white);
+
+  &:focus {
+      outline: none;
+      border: 3px solid var(--primary);
+  }
+
+}
+
+.cars-box-numbers {
+  min-height: 25px;
+  height: auto;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: var(--background);
+  color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: ceter;
+}
+
+.cars-box-numbers tr,
+.cars-box-numbers th {
+  width:25%;
+  border: 1px solid var(--primary);
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cars-numbers {
+  justify-self: center;
+  align-self: center;
+}
