@@ -15,6 +15,6 @@ router.post('/motocycle', MotocycleController.store);
 router.get('/motocycle', MotocycleController.show);
 router.post('/car', CarController.store);
 router.get('/car', CarController.show);
-router.get('/cep', CepController.show);
+router.post('/ceps', CepController.show);
 
 module.exports = router;

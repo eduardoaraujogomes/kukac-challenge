@@ -103,7 +103,7 @@ const Car = () => {
                       id='brandInfo'
                       autoComplete='off'
                     />
-                    <label htmlFor="doorsInfo" className='col-4'>Quantidade de portas</label>
+                    <label htmlFor="doorsInfo" className='col-4'>Quantidade de portas(2-4)</label>
                     <Field
                       className='cars-values p-3 col-4'
                       name='doorsInfo'

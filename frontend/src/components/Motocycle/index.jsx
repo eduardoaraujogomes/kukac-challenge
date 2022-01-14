@@ -125,15 +125,15 @@ const Motocyle = () => {
                         <th>Nº de Passageiros</th>
                         <th>Qntd de Rodas</th>
                       </tr>
-                      {!!motocyclesList && motocyclesList.map((moto, idx) => {
+                      {!!motocyclesList && motocyclesList.map(({ model, year, brand, passenger, wheels }, idx) => {
                         return (
                           <tbody>
                             <tr key={idx}>
-                              <th>{moto.model}</th>
-                              <th>{moto.year}</th>
-                              <th>{moto.brand}</th>
-                              <th>{moto.passengers}</th>
-                              <th>{moto.wheels}</th>
+                              <th>{model}</th>
+                              <th>{year}</th>
+                              <th>{brand}</th>
+                              <th>{passenger}</th>
+                              <th>{wheels}</th>
                             </tr>
                           </tbody>
                         );

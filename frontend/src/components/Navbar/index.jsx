@@ -72,7 +72,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className='nav-item'>
-                  <Link to='/cep' style={{ textDecoration: 'none' }}>
+                  <Link to='/ceps' style={{ textDecoration: 'none' }}>
                     <a
                       className='nav-link active'
                       aria-current='page'

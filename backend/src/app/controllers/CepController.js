@@ -4,6 +4,12 @@ class CepController {
   async show(request, response) {
     const { ceps } = request.body;
 
+    for (let i = 0; i < ceps.length; i++) {
+      if (ceps[i] === 'null' || ceps[i] === 0) {
+        return response.status(400).json({ error: "Tem que conter 5 CEP's" });
+      }
+    }
+
     if (ceps.length !== 5) {
       return response.status(400).json({ error: "Tem que conter 5 CEP's" });
     }

@@ -43,7 +43,7 @@ export const Palindromo = () => {
 
   return (
     <>
-      <div className="col-12 container background-container mt-5" >
+      <div className="container background-container mt-5" >
         <h5 className='text-center mb-5'>Palíndromo de números</h5>
         <div>
           <Formik onSubmit={handleSubmit} initialValues={{ initialValue: '', finalValue: '' }} >
