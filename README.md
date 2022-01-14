@@ -100,6 +100,9 @@ _________
     # Clone esse repositório
     $ git clone https://github.com/eduardoaraujogomes/kukac-challenge.git
     
+    # Entrando na pasta do projeto
+    $ cd kukac-challenge
+    
     # Instalando o frontend
     $ cd frontend
     
