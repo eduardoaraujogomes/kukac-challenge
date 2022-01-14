@@ -7,9 +7,6 @@ import Swal from 'sweetalert2';
 const Motocyle = () => {
   const [motocyclesList, setMotocyclesList] = useState([]);
 
-
-
-
   const cleanTable = () => {
     const motocycle = document.querySelector('[data-js="motocycle"]');
     if (!!motocycle.innerHTML) {

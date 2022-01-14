@@ -3,7 +3,6 @@ import api from '../../services/api';
 import { Field, Formik, Form } from 'formik';
 import Swal from 'sweetalert2';
 
-import './style.scss';
 
 export const Palindromo = () => {
 

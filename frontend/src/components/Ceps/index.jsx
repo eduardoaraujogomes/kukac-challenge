@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './style.scss';
 import { Formik, Form, Field } from 'formik';
 import Cep from './Cep';
 import api from '../../services/api';
@@ -69,11 +68,11 @@ const Ceps = () => {
               <h5>Digite os CEPs:</h5>
               <p>Informe os cinco CEPs que deverão ser consultados e aguarde aparecer o botão informativo ao lado direito da coluna.</p>
               <div className='container d-flex'>
-                <div className="input-ceps container d-flex flex-column align-items-center justify-content-center gap-3">
+                <div className=" container d-flex flex-column align-items-center justify-content-center gap-3">
                   <div className='container d-flex flex-wrap justify-content-center align-items-center gap-1'>
                     <label >Endereço 1:</label>
                     <Field
-                      className='ceps-values p-3 '
+                      className='values p-3 '
                       placeholder='CEP'
                       name='cep_1'
                       required-type='number'
@@ -87,7 +86,7 @@ const Ceps = () => {
                   <div className='container d-flex flex-wrap justify-content-center align-items-center gap-1'>
                     <label >Endereço 2:</label>
                     <Field
-                      className='ceps-values p-3 '
+                      className='values p-3 '
                       placeholder='CEP'
                       name='cep_2'
                       required-type='number'
@@ -101,7 +100,7 @@ const Ceps = () => {
                   <div className='container d-flex flex-wrap justify-content-center align-items-center gap-1'>
                     <label>Endereço 3:</label>
                     <Field
-                      className='ceps-values p-3'
+                      className='values p-3'
                       placeholder='CEP'
                       name='cep_3'
                       required-type='number'
@@ -115,7 +114,7 @@ const Ceps = () => {
                   <div className='container d-flex flex-wrap justify-content-center align-items-center gap-1'>
                     <label>Endereço 4:</label>
                     <Field
-                      className='ceps-values p-3'
+                      className='values p-3'
                       placeholder='CEP'
                       name='cep_4'
                       required-type='number'
@@ -129,7 +128,7 @@ const Ceps = () => {
                   <div className='container d-flex flex-wrap justify-content-center align-items-center gap-1'>
                     <label>Endereço 5:</label>
                     <Field
-                      className='ceps-values p-3'
+                      className='values p-3'
                       placeholder='CEP'
                       name='cep_5'
                       required-type='number'
@@ -148,8 +147,8 @@ const Ceps = () => {
             </Form>
           </Formik>
           <div className='container'>
-            <div className="ceps-box-numbers p-3">
-              <div data-js='ceps' className="ceps-numbers container d-flex flex-wrap gap-3 justify-content-center align-items-center col-12 my-4">
+            <div className="box-numbers p-3">
+              <div data-js='ceps' className="numbers container d-flex flex-wrap gap-3 justify-content-center align-items-center col-12 my-4">
                 {!!cepsList && cepsList?.map(({ uf, logradouro, bairro, localidade }, idx) => {
                   return (
                     <Cep

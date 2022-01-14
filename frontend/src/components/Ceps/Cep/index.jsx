@@ -2,9 +2,6 @@ import React from 'react';
 
 const Cep = ({ cep, uf, cidade, logradouro, bairro, idModal }) => {
 
-
-
-
   return (
     <>
       <button type="button" class="button-primary" data-bs-toggle="modal" data-bs-target={`#${idModal}`}>
@@ -15,7 +12,7 @@ const Cep = ({ cep, uf, cidade, logradouro, bairro, idModal }) => {
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content background-container">
             <div class="modal-header">
-              <h5 class="modal-title" id={idModal}>Endereço</h5>
+              <h5 class="modal-title" id={idModal}>Endereço - {cep}</h5>
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
