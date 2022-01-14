@@ -5,10 +5,11 @@
   "license": "MIT",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts",
+    "server": "nodemon src/index.ts",
     "build": "tsc -p .",
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "testWatch": "jest --watchAll"
   },
   "dependencies": {
     "axios": "^0.24.0",
