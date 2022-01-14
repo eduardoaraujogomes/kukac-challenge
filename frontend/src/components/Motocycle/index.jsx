@@ -67,32 +67,32 @@ const Motocyle = () => {
 
   return (
     <>
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="motoModal" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
+      <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="motocycleModal" aria-hidden="true" style={{ height: '100vh' }}>
+        <div class="modal-dialog modal-xl background-container">
+          <div class="modal-content background-container">
             <div class="modal-header">
-              <h5 class="modal-title" id="motoModal">Moto</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title" id="motocycleModal">Moto</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <Formik onSubmit={handleSubmit} initialValues={{ modelInfo: '', yearInfo: '', brandInfo: '', passengersInfo: '' }} >
                 <Form className="container d-flex flex-column align-items-center gap-3">
-                  <h5>Motocicleta</h5>
-                  <div className="container d-flex flex-wrap align-items-center justify-content-center gap-3">
+                  <div className="d-flex flex-wrap align-items-center justify-content-center gap-3">
+                    <label className='col-4' htmlFor="modelInfo">Modelo</label>
                     <Field
-                      className='motocycles-values p-3'
-                      placeholder='Modelo'
+                      className='motocycles-values col-4 p-3'
                       name='modelInfo'
                       required-type='text'
                       id='modelInfo'
                     />
+                    <label htmlFor="yearInfo" className='col-4'>Ano de fabricação</label>
                     <Field
-                      className='motocycles-values p-3'
-                      placeholder='Ano de fabricação'
+                      className='motocycles-values col-4 p-3'
                       name='yearInfo'
                       required-type='text'
                       id='yearInfo'
                     />
+
                     <Field
                       className='motocycles-values p-3'
                       placeholder='Marca'

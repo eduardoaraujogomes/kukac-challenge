@@ -17,13 +17,12 @@ const Vehicles = () => {
         <div>
           <div className='container d-flex flex-column align-items-center gap-3'>
             <p>Informe qual tipo de veículo você deseja cadastrar para gerar o formulário corretamente.
-              No formulário, insira todos os campos para a realização do cadastro.
             </p>
             <div className="container d-flex justify-content-center align-items-center gap-3">
-              <button type="button" class="button-primary col-2 p-2" data-bs-toggle="modal" data-backdrop="false" data-bs-target="#carroModal">
+              <button type="button" class="button-primary col-2 p-2" data-bs-toggle="modal" data-bs-target="#carModal">
                 Carro
               </button>
-              <button type="button" class="button-primary col-2 p-2" data-bs-toggle="modal" data-bs-target="#motoModal">
+              <button type="button" class="button-primary col-2 p-2" data-bs-toggle="modal" data-bs-target="#motocycleModal">
                 Moto
               </button>
             </div>

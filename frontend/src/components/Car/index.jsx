@@ -75,11 +75,11 @@ const Car = () => {
 
   return (
     <>
-      <div className="modal" id="carroModal" tabIndex="-1" aria-labelledby="carroModal" aria-hidden="true" style={{ height: '100vh' }}>
-        <div className="modal-dialog modal-xl background-container">
+      <div className="modal" id="carModal" tabIndex="-1" aria-labelledby="carModal" aria-hidden="true" style={{ height: '100vh' }}>
+        <div className="modal-dialog modal-xl">
           <div className="modal-content background-container">
             <div className="modal-header">
-              <h4 className="modal-title" id="carroModal">Carro</h4>
+              <h4 className="modal-title" id="carModal">Carro</h4>
               <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" ></button>
             </div>
             <div className="modal-body">
@@ -144,7 +144,7 @@ const Car = () => {
                     </table>
                   </div>
                   <div className="container d-flex justify-content-center align-items-center gap-3">
-                    <button className='' type="submit">Cadastrar</button>
+                    <button className='button-primary' type="submit">Cadastrar</button>
                   </div>
                 </Form>
               </Formik>

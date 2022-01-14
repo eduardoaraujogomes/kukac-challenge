@@ -1,11 +1,4 @@
-.background-container{
-  background-color: var(--background);
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  filter: brightness(0.80);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
+
 
 .panel-palindromo {
   display: flex;
@@ -45,7 +38,7 @@
   padding: 10px;
   margin: 5px;
   border-radius: 5px;
-  background-color: var(--background);
+  background-color: var(--background-box);
   color: var(--white);
   display: flex;
   justify-content: center;
