@@ -7,7 +7,9 @@ import Swal from 'sweetalert2';
 const Car = () => {
   const [carsList, setCarsList] = useState([]);
 
-
+  const handleInput = (value) => {
+    value.target.value = value.target.value.replace(/[^0-9]/g, '');
+  };
 
   const cleanTable = () => {
     const car = document.querySelector('[data-js="car"]');
@@ -94,6 +96,7 @@ const Car = () => {
                       required-type='text'
                       id='yearInfo'
                       autoComplete='off'
+                      onInput={(e) => handleInput(e)}
                     />
                     <label htmlFor="brandInfo" className='col-4'>Marca</label>
                     <Field
@@ -110,6 +113,7 @@ const Car = () => {
                       required-type='number'
                       id='doorsInfo'
                       autoComplete='off'
+                      onInput={(e) => handleInput(e)}
                     />
                   </div>
                   <h5 className='mt-2'>Carros cadastrados:</h5>

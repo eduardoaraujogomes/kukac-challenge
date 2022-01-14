@@ -7,6 +7,11 @@ import Swal from 'sweetalert2';
 const Motocyle = () => {
   const [motocyclesList, setMotocyclesList] = useState([]);
 
+  const handleInput = (value) => {
+    value.target.value = value.target.value.replace(/[^0-9]/g, '');
+  };
+
+
   const cleanTable = () => {
     const motocycle = document.querySelector('[data-js="motocycle"]');
     if (!!motocycle.innerHTML) {
@@ -92,6 +97,7 @@ const Motocyle = () => {
                       required-type='number'
                       id='yearInfo'
                       autoComplete='off'
+                      onInput={(e) => handleInput(e)}
                     />
 
                     <label htmlFor="brandInfo" className='col-4'>Marca</label>
@@ -110,6 +116,7 @@ const Motocyle = () => {
                       required-type='number'
                       id='passengersInfo'
                       autoComplete='off'
+                      onInput={(e) => handleInput(e)}
                     />
                   </div>
                   <h5>Motocicletas cadastradas:</h5>
