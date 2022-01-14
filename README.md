@@ -122,7 +122,7 @@ _________
     $ yarn ou npm i 
     
     # Executar
-    $ yarn server ou npm server
+    $ yarn server ou npm run server
     
     
     # Rodando os testes
