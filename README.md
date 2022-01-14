@@ -100,6 +100,9 @@ _________
     # Clone esse repositório
     $ git clone https://github.com/eduardoaraujogomes/kukac-challenge.git
     
+    # Entrando na pasta do projeto
+    $ cd kukac-challenge
+    
     # Instalando o frontend
     $ cd frontend
     
@@ -119,7 +122,7 @@ _________
     $ yarn ou npm i 
     
     # Executar
-    $ yarn server ou npm server
+    $ yarn server ou npm run server
     
     
     # Rodando os testes
