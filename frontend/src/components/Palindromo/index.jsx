@@ -52,7 +52,7 @@ export const Palindromo = () => {
               <div className="container d-flex flex-wrap align-items-center justify-content-center gap-3">
                 <label className="" htmlFor="initialValue">Valor Inicial</label>
                 <Field
-                  className='palindromo-values p-3'
+                  className='values p-3'
                   name='initialValue'
                   required-type='number'
                   id='initialValue'
@@ -60,7 +60,7 @@ export const Palindromo = () => {
                 />
                 <label className="" htmlFor=" finalValue">Valor Final</label>
                 <Field
-                  className='palindromo-values p-3'
+                  className='values p-3'
                   name='finalValue'
                   required-type='number'
                   id='finalValue'
@@ -68,8 +68,8 @@ export const Palindromo = () => {
                 />
               </div>
               <h5>Lista de números:</h5>
-              <div className="palindromo-box-numbers p-3">
-                <table data-js='palindromo' className="palindromo-numbers">
+              <div className="box-numbers  p-3">
+                <table data-js='palindromo' className="numbers">
 
                 </table>
               </div>

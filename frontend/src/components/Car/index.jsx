@@ -81,7 +81,7 @@ const Car = () => {
                   <div className=" d-flex flex-wrap align-items-center justify-content-center gap-3">
                     <label className='col-4' htmlFor="modelInfo">Modelo</label>
                     <Field
-                      className='cars-values p-3 col-4'
+                      className='values p-3 col-4'
                       name='modelInfo'
                       required-type='text'
                       id='modelInfo'
@@ -89,7 +89,7 @@ const Car = () => {
                     />
                     <label htmlFor="yearInfo" className='col-4'>Ano de fabricação</label>
                     <Field
-                      className='cars-values col-4 p-3'
+                      className='values col-4 p-3'
                       name='yearInfo'
                       required-type='text'
                       id='yearInfo'
@@ -97,7 +97,7 @@ const Car = () => {
                     />
                     <label htmlFor="brandInfo" className='col-4'>Marca</label>
                     <Field
-                      className='cars-values col-4 p-3'
+                      className='values col-4 p-3'
                       name='brandInfo'
                       required-type='text'
                       id='brandInfo'
@@ -105,7 +105,7 @@ const Car = () => {
                     />
                     <label htmlFor="doorsInfo" className='col-4'>Quantidade de portas(2-4)</label>
                     <Field
-                      className='cars-values p-3 col-4'
+                      className='values p-3 col-4'
                       name='doorsInfo'
                       required-type='number'
                       id='doorsInfo'
@@ -113,8 +113,8 @@ const Car = () => {
                     />
                   </div>
                   <h5 className='mt-2'>Carros cadastrados:</h5>
-                  <div className="cars-box-numbers container d-flex flex-column justify-content-center align-items-center p-3">
-                    <table data-js='car' className="cars-numbers align-items-center justify-content-center">
+                  <div className="box-numbers container d-flex flex-column justify-content-center align-items-center p-3">
+                    <table data-js='car' className="numbers align-items-center justify-content-center">
                       <tr >
                         <th>Modelo</th>
                         <th>Ano de Fabricação</th>

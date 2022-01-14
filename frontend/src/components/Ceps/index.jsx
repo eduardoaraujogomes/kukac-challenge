@@ -11,7 +11,7 @@ const Ceps = () => {
   const cepsId = ['primeirocep', 'segundocep', 'terceirocep', 'quartocep', 'quintocep'];
 
   const handleInput = (value) => {
-    value.target.value = value.target.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+    value.target.value = value.target.value.replace(/[^0-9]/g, '');
   };
 
   const handleSubmit = async ({ cep_1, cep_2, cep_3, cep_4, cep_5 }) => {

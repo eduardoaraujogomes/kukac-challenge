@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.scss';
 import Car from '../Car';
 import Motocycle from '../Motocycle';
 

@@ -1,56 +1,5 @@
-.panel-purchase {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
-
-}
-
-.panel-input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-
-}
-
-.purchase-values {
-  height: 25px;
-  padding: 2px;
-  margin: 5px;
-  border: 3px solid var(--primary);
-  border-radius: 5px;
-  background-color: var(--background);
-  color: var(--white);
-
-  &:focus {
-      outline: none;
-      border: 3px solid var(--primary);
-  }
-
-}
-
-.desactive {
-  display: none;
-  overflow: hidden;
-}
-
-.purchase-box-numbers {
-  min-height: 25px;
-  height: auto;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  background-color: var(--background-box);
-  color: var(--white);
-  display: flex;
-  justify-content: center;
-  align-items: ceter;
-}
-
-
-.purchase-box-numbers tr,
-.purchase-box-numbers th {
+.purchase-table tr,
+.purchase-table th {
   width:25%;
   border: 1px solid var(--primary);
 

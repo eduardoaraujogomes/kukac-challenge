@@ -82,7 +82,7 @@ const Motocyle = () => {
                   <div className="d-flex flex-wrap align-items-center justify-content-center gap-3">
                     <label className='col-4' htmlFor="modelInfo">Modelo</label>
                     <Field
-                      className='motocycles-values col-4 p-3'
+                      className='values col-4 p-3'
                       name='modelInfo'
                       required-type='text'
                       id='modelInfo'
@@ -90,7 +90,7 @@ const Motocyle = () => {
                     />
                     <label htmlFor="yearInfo" className='col-4'>Ano de fabricação</label>
                     <Field
-                      className='motocycles-values col-4 p-3'
+                      className='values col-4 p-3'
                       name='yearInfo'
                       required-type='number'
                       id='yearInfo'
@@ -99,7 +99,7 @@ const Motocyle = () => {
 
                     <label htmlFor="brandInfo" className='col-4'>Marca</label>
                     <Field
-                      className='motocycles-values p-3 col-4'
+                      className='values p-3 col-4'
                       name='brandInfo'
                       required-type='text'
                       id='brandInfo'
@@ -108,7 +108,7 @@ const Motocyle = () => {
 
                     <label htmlFor="passengersInfo" className='col-4'>Nº de Passageiros(1-2)</label>
                     <Field
-                      className='motocycles-values p-3 col-4'
+                      className='values p-3 col-4'
                       name='passengersInfo'
                       required-type='number'
                       id='passengersInfo'
@@ -116,8 +116,8 @@ const Motocyle = () => {
                     />
                   </div>
                   <h5>Motocicletas cadastradas:</h5>
-                  <div className="motocycles-box-numbers container d-flex flex-column justify-content-center align-items-center p-3">
-                    <table data-js='motocycle' className="motocycles-numbers align-items-center justify-content-center">
+                  <div className="box-numbers container d-flex flex-column justify-content-center align-items-center p-3">
+                    <table data-js='motocycle' className="numbers align-items-center justify-content-center">
                       <tr >
                         <th>Modelo</th>
                         <th>Ano de Fabricação</th>

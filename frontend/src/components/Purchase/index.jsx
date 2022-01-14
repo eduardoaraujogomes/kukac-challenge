@@ -7,7 +7,13 @@ import './style.scss';
 
 export const Purchase = () => {
 
+  const handleInput = (value) => {
+    value.target.value = value.target.value.replace(/[^0-9]/, '');
+  };
+
   const handleSubmit = async ({ purchaseValue, payment }) => {
+
+
     if (purchaseValue === '' || payment === '') {
       Swal.fire({
         icon: 'error',
@@ -67,26 +73,32 @@ export const Purchase = () => {
                 e quantas notas serão retiradas do caixa.
               </p>
               <div className="container d-flex flex-wrap align-items-center justify-content-center gap-3">
-                <label className="col-lg-2 col-md-6" htmlFor="purchaseValue">Valor total</label>
-                <Field
-                  className='purchase-values p-3'
-                  name='purchaseValue'
-                  required-type='number'
-                  id='purchaseValue'
-                  autoComplete='off'
-                />
-                <label className="col-lg-2 col-md-6" htmlFor="payment">Valor do pagamento</label>
-                <Field
-                  className='purchase-values p-3'
-                  name='payment'
-                  required-type='number'
-                  id='payment'
-                  autoComplete='off'
-                />
+                <div className='d-flex gap-3 align-items-center justify-content-space-between flex-wrap'>
+                  <label className="" htmlFor="purchaseValue">Valor total</label>
+                  <Field
+                    className='values p-3 '
+                    name='purchaseValue'
+                    required-type='number'
+                    id='purchaseValue'
+                    autoComplete='off'
+                    onInput={(e) => handleInput(e)}
+                  />
+                </div>
+                <div className='d-flex gap-3 align-items-center justify-content-space-between flex-wrap'>
+                  <label className="" htmlFor="payment">Valor do pagamento</label>
+                  <Field
+                    className='values p-3 '
+                    name='payment'
+                    required-type='number'
+                    id='payment'
+                    autoComplete='off'
+                    onInput={(e) => handleInput(e)}
+                  />
+                </div>
               </div>
-              <h5>Troco e notas:</h5>
-              <div className="purchase-box-numbers p-3">
-                <table data-js='purchase' className="purchase-numbers container d-flex justify-content-center align-items-center">
+              <h5 className='mt-4'>Troco e notas:</h5>
+              <div className="box-numbers p-3">
+                <table data-js='purchase' className="numbers purchase-table container d-flex justify-content-center align-items-center">
 
                 </table>
               </div>
